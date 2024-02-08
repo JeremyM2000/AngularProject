@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterModule } from '@angular/router';
+import { BookDetailComponent } from '../book-detail/book-detail.component';
 import booksData from '../../assets/books.json';
 
 export default class Book {
@@ -22,7 +24,7 @@ export { books };
 @Component({
   selector: 'app-books',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, BookDetailComponent],
   templateUrl: './books.component.html',
   styleUrl: './books.component.css'
 })
