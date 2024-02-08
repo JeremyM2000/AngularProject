@@ -1,0 +1,25 @@
+<div class="container">  
+  <h2>Members</h2>
+  <table>  
+    <thead>  
+        <tr>  
+          <th>ID</th>  
+          <th>First name</th>  
+          <th>Last name</th>  
+          <th>Inscription date</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+      <tr *ngFor="let member of members">  
+        <td>
+          <a [routerLink]="['/member', member.id]">
+            {{ member.id }}
+          </a>
+        </td>  
+        <td>{{ member.first_name }}</td>  
+        <td>{{ member.last_name }}</td>  
+        <td>{{ member.inscription_date }}</td>  
+      </tr> 
+    </tbody>  
+  </table>  
+</div>

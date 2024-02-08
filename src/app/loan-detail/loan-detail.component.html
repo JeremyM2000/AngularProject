@@ -1,0 +1,50 @@
+<h2>Loan Details</h2>
+
+<div *ngIf="loan">
+    <a>ID : {{ loan.id }}</a>
+    <br>
+    <a>ID member : {{ loan.id_member }}</a>
+    <br>
+    <a>ID Book : {{ loan.id_book }}</a>
+    <br>
+    <a>Date : {{ loan.date }}</a>
+    <br>
+    <a>End Date : {{ loan.end_date }}</a>
+  
+    <h3>Member</h3>
+    <div *ngIf="member">
+        <a>ID : {{ member.id }}</a>
+        <br>
+        <a>First name : {{ member.first_name }}</a>
+        <br>
+        <a>Last name : {{ member.last_name }}</a>
+        <br>
+        <a>Inscription date : {{ member.inscription_date }}</a>
+        <br>
+        <a>Email address : {{ member.email_address }}</a>
+        <br>
+        <a>Phone number : {{ member.phone_number }}</a>
+    </div>
+
+    <h3>Books</h3>
+    <div *ngIf="book">
+        <table>  
+            <thead>  
+                <tr>  
+                <th>Name</th>  
+                <th>ID</th>  
+                <th>Author</th>  
+                <th>Publication date</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+            <tr *ngFor="let b of book">  
+                <td>{{ b.name }}</td>  
+                <td>{{ b.id }}</td>  
+                <td>{{ b.author }}</td>  
+                <td>{{ b.publication_date }}</td>  
+            </tr>  
+            </tbody>  
+        </table> 
+    </div>
+  </div>

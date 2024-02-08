@@ -1,0 +1,27 @@
+<div class="container">  
+    <h2>Loans</h2>
+    <table>  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>ID Member</th>  
+            <th>ID Book</th>  
+            <th>Date</th>  
+            <th>End date</th>  
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let loan of loans">  
+          <td>
+            <a [routerLink]="['/loan', loan.id]">
+              {{ loan.id }}
+            </a>
+          </td>  
+          <td>{{ loan.id_member }}</td>  
+          <td>{{ loan.id_book }}</td>  
+          <td>{{ loan.date }}</td>
+          <td>{{ loan.end_date }}</td>  
+        </tr> 
+      </tbody>  
+    </table>  
+  </div>  

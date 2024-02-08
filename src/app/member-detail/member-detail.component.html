@@ -1,0 +1,43 @@
+<h2>Member Details</h2>
+
+<div *ngIf="member">
+  <a>ID : {{ member.id }}</a>
+  <br>
+  <a>First name : {{ member.first_name }}</a>
+  <br>
+  <a>Last name : {{ member.last_name }}</a>
+  <br>
+  <a>Inscription date : {{ member.inscription_date }}</a>
+  <br>
+  <a>Email address : {{ member.email_address }}</a>
+  <br>
+  <a>Phone number : {{ member.phone_number }}</a>
+
+  <h3>Loans</h3>
+  <div *ngIf="loan">
+    <table>  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>ID Member</th>  
+            <th>ID Book</th>  
+            <th>Date</th>  
+            <th>End date</th>  
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let l of loan">  
+          <td>
+            <a [routerLink]="['/loan', loan.id]">
+              {{ l.id }}
+            </a>
+          </td>  
+          <td>{{ l.id_member }}</td>  
+          <td>{{ l.id_book }}</td>  
+          <td>{{ l.date }}</td>
+          <td>{{ l.end_date }}</td>  
+        </tr> 
+      </tbody>  
+    </table>   
+  </div>
+</div>
