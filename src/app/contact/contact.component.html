@@ -7,13 +7,13 @@
         <mat-grid-tile>
             <mat-form-field>
                 <mat-label>Email</mat-label>
-                <input matInput>
+                <input matInput [(ngModel)]="email">
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile>
             <mat-form-field>
                 <mat-label>Message</mat-label>
-                <textarea matInput></textarea>
+                <textarea matInput [(ngModel)]="message"></textarea>
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile>

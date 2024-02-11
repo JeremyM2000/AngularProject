@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatGridListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
@@ -26,7 +28,6 @@ export class ContactComponent{
   message: string = '';
 
   onSubmit(): void {
-    // const { email, message } = this.form?.value;
     alert(`Email: ${this.email}, Message: ${this.message} `);
   }
 }
