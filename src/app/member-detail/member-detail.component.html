@@ -1,43 +1,55 @@
-<h2>Member Details</h2>
+<div class="container">
+  <mat-toolbar style="background-color:darkcyan;">
+    <span>Members - Details</span>
+  </mat-toolbar> 
 
-<div *ngIf="member">
-  <a>ID : {{ member.id }}</a>
-  <br>
-  <a>First name : {{ member.first_name }}</a>
-  <br>
-  <a>Last name : {{ member.last_name }}</a>
-  <br>
-  <a>Inscription date : {{ member.inscription_date }}</a>
-  <br>
-  <a>Email address : {{ member.email_address }}</a>
-  <br>
-  <a>Phone number : {{ member.phone_number }}</a>
-
-  <h3>Loans</h3>
-  <div *ngIf="loan">
-    <table>  
-      <thead>  
-          <tr>  
-            <th>ID</th>  
-            <th>ID Member</th>  
-            <th>ID Book</th>  
-            <th>Date</th>  
-            <th>End date</th>  
-          </tr>  
-      </thead>  
-      <tbody>  
-        <tr *ngFor="let l of loan">  
-          <td>
-            <a [routerLink]="['/loan', loan.id]">
-              {{ l.id }}
-            </a>
-          </td>  
-          <td>{{ l.id_member }}</td>  
-          <td>{{ l.id_book }}</td>  
-          <td>{{ l.date }}</td>
-          <td>{{ l.end_date }}</td>  
-        </tr> 
-      </tbody>  
-    </table>   
+  <div *ngIf="member">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>Member {{ member.id }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>First name : {{ member.first_name }}</p>
+            <p>Last name : {{ member.last_name }}</p>
+            <p>Inscription date : {{ member.inscription_date }}</p>
+            <p>Email address : {{ member.email_address }}</p>
+            <p>Phone number : {{ member.phone_number }}</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="card_loans">
+          <mat-card-header>
+            <mat-card-title>Loans</mat-card-title>
+          </mat-card-header>
+          <mat-card-content *ngIf="loan">
+            <mat-grid-list cols="2" rowHeight="200px">
+              <mat-grid-tile *ngFor="let l of loan">
+                <mat-card class="card_loan">
+                  <mat-card-header>
+                    <mat-card-title>
+                      <a [routerLink]="['/loan', l.id]">
+                        Loan n° : {{ l.id }}
+                      </a>
+                    </mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p *ngFor="let b of l.id_book">
+                      <a [routerLink]="['/book', b]">
+                        Book : {{ b }}
+                      </a>
+                    </p>
+                    <p>Loan date : {{ l.date }}</p>
+                    <p>End date : {{ l.end_date }}</p>
+                  </mat-card-content>
+                </mat-card>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
 </div>

@@ -1,1 +1,26 @@
-<p>contact works!</p>
+<div class="container">
+    <mat-toolbar style="background-color:#424242;">
+        <span>Contact</span>
+    </mat-toolbar> 
+
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field>
+                <mat-label>Message</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <button mat-raised-button style="margin-right:20px" (click)="onSubmit()">
+                <mat-icon type="submit">send</mat-icon>
+                Submit
+            </button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

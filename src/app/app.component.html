@@ -7,17 +7,39 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/members">Members</a></li>
-  <li><a href="/books">Books</a></li>
-  <li><a href="/loans">Loans</a></li>
-  <li><a href="/contact">Contact</a></li>
-</ul>
-
-<!-- <app-members></app-members>
-<app-books></app-books>
-<app-loans></app-loans> -->
+<mat-toolbar>
+  <a href="/">
+    <button mat-mini-fab	style="margin-right:20px">
+      <mat-icon>home</mat-icon>
+    </button>
+  </a>
+  <a href="/members">
+    <button mat-raised-button style="margin-right:20px; background-color:darkcyan;">
+      <mat-icon>account_box</mat-icon>
+      Members
+    </button>
+  </a>
+  <a href="/books">
+    <button mat-raised-button style="margin-right:20px; background-color:purple;">
+      <mat-icon>book</mat-icon>
+      Books
+    </button>
+  </a>
+  <a href="/loans">
+    <button mat-raised-button style="margin-right:20px; background-color:darkgreen;">
+      <mat-icon>bookmark_border</mat-icon>
+      Loans
+    </button>
+  </a>
+  <a href="/contact">
+    <button mat-raised-button style="margin-right:20px">
+      <mat-icon>contact_support</mat-icon>
+      Contact
+    </button>
+  </a>
+  <div style="flex-grow: 1"></div>
+  <span style="margin-right:20px">Jeremy's Library</span>
+</mat-toolbar>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->

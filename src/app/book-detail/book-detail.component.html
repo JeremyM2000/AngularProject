@@ -1,11 +1,19 @@
-<h2>Book Details</h2>
+<div class="container">
+  <mat-toolbar style="background-color:purple;">
+    <span>Books - Details</span>
+  </mat-toolbar> 
 
-<div *ngIf="book">
-    <a>Name : {{ book.name }}</a>
-    <br>
-    <a>ID : {{ book.id }}</a>
-    <br>
-    <a>Author : {{ book.author }}</a>
-    <br>
-    <a>Publication date : {{ book.publication_date }}</a>
+  <div *ngIf="book">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>Books {{ book.id }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Name : {{ book.name }}</p>
+        <p>Ref. : {{ book.id }}</p>
+        <p>Author : {{ book.author }}</p>
+        <p>Publication date : {{ book.publication_date }}</p>
+      </mat-card-content>
+    </mat-card>
   </div>
+</div>

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterOutlet, RouterModule } from '@angular/router'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 import Member from '../members/members.component';
 import { members } from '../members/members.component';
@@ -12,7 +17,17 @@ import { loans } from '../loans/loans.component';
 @Component({
   selector: 'app-member-detail',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, LoanDetailComponent],
+  imports: [
+    CommonModule, 
+    RouterOutlet, 
+    RouterModule, 
+    LoanDetailComponent,
+    MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule
+  ],
   templateUrl: './member-detail.component.html',
   styleUrl: './member-detail.component.css'
 })
@@ -29,13 +44,7 @@ export class MemberDetailComponent implements OnInit {
     this.member = members.find(member => member.id === memberIdFromRoute);
 
     if(this.member != undefined)
-    {
-      for(var l of loans)
-      {
-        var _l = loans.find(loan => loan.id_member === memberIdFromRoute);
-        if(_l != undefined)
-          this.loan.push(_l);
-      }
-    }
+      this.loan = loans.filter(loan => loan.id_member === memberIdFromRoute);   
+    
   }
 }

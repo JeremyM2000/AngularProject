@@ -1,25 +1,26 @@
-<div class="container">  
-  <h2>Members</h2>
-  <table>  
-    <thead>  
-        <tr>  
-          <th>ID</th>  
-          <th>First name</th>  
-          <th>Last name</th>  
-          <th>Inscription date</th>  
-        </tr>  
-    </thead>  
-    <tbody>  
-      <tr *ngFor="let member of members">  
-        <td>
+<div class="container">
+  <mat-toolbar style="background-color:darkcyan;">
+    <span>Members</span>
+  </mat-toolbar> 
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let member of members">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Member {{ member.id }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>First name : {{ member.first_name }}</p>
+          <p>Last name : {{ member.last_name }}</p>
+          <p>Inscription date : {{ member.inscription_date }}</p>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
           <a [routerLink]="['/member', member.id]">
-            {{ member.id }}
+            <button style="color: black" mat-button>Details</button>
           </a>
-        </td>  
-        <td>{{ member.first_name }}</td>  
-        <td>{{ member.last_name }}</td>  
-        <td>{{ member.inscription_date }}</td>  
-      </tr> 
-    </tbody>  
-  </table>  
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
+

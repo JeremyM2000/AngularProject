@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, RouterOutlet, RouterModule } from '@angular/router'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 import Loans from '../loans/loans.component';
 import { loans } from '../loans/loans.component';
@@ -14,7 +19,16 @@ import { books } from '../books/books.component';
 @Component({
   selector: 'app-loan-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterOutlet, 
+    RouterModule, 
+    MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule
+  ],
   templateUrl: './loan-detail.component.html',
   styleUrl: './loan-detail.component.css'
 })

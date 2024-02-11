@@ -1,0 +1,17 @@
+.card{
+    width: 90%;
+    height: 90%;
+    background: dimgray;
+}
+
+.card_loans{
+    width: 90%;
+    height: 90%;
+    background: darkgreen;
+}
+
+.card_loan{
+    width: 90%;
+    height: 100%;
+    background: dimgray;
+}
