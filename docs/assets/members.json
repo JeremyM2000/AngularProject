@@ -1,0 +1,82 @@
+[
+    {
+      "id": 0,
+      "last_name": "Smith",
+      "first_name": "John",
+      "inscription_date": "2023-01-05",
+      "email_address": "john.smith@email.com",
+      "phone_number": "0123456789"
+    },
+    {
+      "id": 1,
+      "last_name": "Johnson",
+      "first_name": "Emma",
+      "inscription_date": "2022-11-12",
+      "email_address": "emma.johnson@email.com",
+      "phone_number": "0987654321"
+    },
+    {
+      "id": 2,
+      "last_name": "Williams",
+      "first_name": "Michael",
+      "inscription_date": "2023-03-20",
+      "email_address": "michael.williams@email.com",
+      "phone_number": "0654321890"
+    },
+    {
+      "id": 3,
+      "last_name": "Jones",
+      "first_name": "Sophia",
+      "inscription_date": "2022-09-08",
+      "email_address": "sophia.jones@email.com",
+      "phone_number": "0789456123"
+    },
+    {
+      "id": 4,
+      "last_name": "Brown",
+      "first_name": "Oliver",
+      "inscription_date": "2023-02-18",
+      "email_address": "oliver.brown@email.com",
+      "phone_number": "0543218769"
+    },
+    {
+      "id": 5,
+      "last_name": "Davis",
+      "first_name": "Ava",
+      "inscription_date": "2022-12-30",
+      "email_address": "ava.davis@email.com",
+      "phone_number": "0365987412"
+    },
+    {
+      "id": 6,
+      "last_name": "Miller",
+      "first_name": "Daniel",
+      "inscription_date": "2023-04-25",
+      "email_address": "daniel.miller@email.com",
+      "phone_number": "0897412365"
+    },
+    {
+      "id": 7,
+      "last_name": "Wilson",
+      "first_name": "Emily",
+      "inscription_date": "2022-10-10",
+      "email_address": "emily.wilson@email.com",
+      "phone_number": "0321654987"
+    },
+    {
+      "id": 8,
+      "last_name": "Moore",
+      "first_name": "William",
+      "inscription_date": "2023-06-08",
+      "email_address": "william.moore@email.com",
+      "phone_number": "0765432198"
+    },
+    {
+      "id": 9,
+      "last_name": "Taylor",
+      "first_name": "Isabella",
+      "inscription_date": "2022-08-15",
+      "email_address": "isabella.taylor@email.com",
+      "phone_number": "0987123456"
+    }
+  ]

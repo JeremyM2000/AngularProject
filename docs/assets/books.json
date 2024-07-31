@@ -1,0 +1,62 @@
+[
+    {
+      "name": "To Kill a Mockingbird",
+      "id": "9780061120084",
+      "author": "Harper Lee",
+      "publication_date": "1960-07-11"
+    },
+    {
+      "name": "1984",
+      "id": "9780451524935",
+      "author": "George Orwell",
+      "publication_date": "1949-06-08"
+    },
+    {
+      "name": "The Great Gatsby",
+      "id": "9780743273565",
+      "author": "F. Scott Fitzgerald",
+      "publication_date": "1925-04-10"
+    },
+    {
+      "name": "Pride and Prejudice",
+      "id": "9780141439518",
+      "author": "Jane Austen",
+      "publication_date": "1813-01-28"
+    },
+    {
+      "name": "The Catcher in the Rye",
+      "id": "9780316769488",
+      "author": "J.D. Salinger",
+      "publication_date": "1951-07-16"
+    },
+    {
+      "name": "To the Lighthouse",
+      "id": "9780156907392",
+      "author": "Virginia Woolf",
+      "publication_date": "1927-05-05"
+    },
+    {
+      "name": "Brave New World",
+      "id": "9780060850524",
+      "author": "Aldous Huxley",
+      "publication_date": "1932-12-06"
+    },
+    {
+      "name": "Moby-Dick",
+      "id": "9781853260087",
+      "author": "Herman Melville",
+      "publication_date": "1851-10-18"
+    },
+    {
+      "name": "The Hobbit",
+      "id": "9780547928227",
+      "author": "J.R.R. Tolkien",
+      "publication_date": "1937-09-21"
+    },
+    {
+      "name": "Frankenstein",
+      "id": "9780486282114",
+      "author": "Mary Shelley",
+      "publication_date": "1818-01-01"
+    }
+  ]
